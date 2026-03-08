@@ -28,6 +28,7 @@ const researchProjects = [
     title: "6GDIFERENTE: 6G Distributed and Federated Experiments in Radio, Edge and Non-Terrestrial Networks",
     role: "Researcher",
     funder: "Centro para el Desarrollo Tecnológico y la Innovación (CDTI)",
+    link: "https://6gdiferente.com/",
   },
   {
     period: "Jan 2019 – Sep 2022",
