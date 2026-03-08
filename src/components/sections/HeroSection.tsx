@@ -3,7 +3,7 @@ import { Award, GraduationCap } from "lucide-react";
 import profilePhoto from "@/assets/asantos.jpg";
 
 const awards = [
-  { year: "2025", title: "Special Recognition for Outstanding Reviews", org: "CHI 2025 – Conference on Human Factors in Computing Systems" },
+  
   { year: "2022", title: "Ph.D. Outstanding Thesis Award", org: "University Carlos III of Madrid" },
   { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"' },
 ];
