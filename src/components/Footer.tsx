@@ -8,8 +8,11 @@ export function Footer() {
           <p className="text-muted-foreground text-sm mb-2">
             Vicomtech, Digital Media & Communications • Deusto University
           </p>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-sm mb-2">
             © {currentYear} Andrés Santos Torres. All rights reserved.
+          </p>
+          <p className="text-muted-foreground text-sm">
+            Made with <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Lovable</a>
           </p>
         </div>
       </div>
