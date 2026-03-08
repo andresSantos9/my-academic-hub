@@ -1,6 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Award, GraduationCap } from "lucide-react";
 import profilePhoto from "@/assets/asantos.jpg";
+import orcidLogo from "@/assets/orcid-logo.png";
+import githubLogo from "@/assets/github-logo.png";
+import linkedinLogo from "@/assets/linkedin-logo.png";
+import googleScholarLogo from "@/assets/google-scholar-logo.png";
 
 const awards = [
   
