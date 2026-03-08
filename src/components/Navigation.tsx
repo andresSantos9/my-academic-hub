@@ -40,25 +40,18 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <a
             href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("#about");
-            }}
+            onClick={(e) => { e.preventDefault(); handleNavClick("#about"); }}
             className="font-serif text-xl font-semibold text-primary hover:text-accent transition-colors"
           >
-            Dr. Jane Smith
+            Andrés Santos Torres
           </a>
 
-          {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
+                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                   className="text-foreground/80 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full"
                 >
                   {link.label}
@@ -67,7 +60,6 @@ export function Navigation() {
             ))}
           </ul>
 
-          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
@@ -78,17 +70,13 @@ export function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <ul className="md:hidden mt-4 py-4 border-t border-border space-y-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
+                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                   className="block text-foreground/80 hover:text-primary font-medium transition-colors py-2"
                 >
                   {link.label}

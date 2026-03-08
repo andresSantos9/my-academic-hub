@@ -1,16 +1,16 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Award, DollarSign } from "lucide-react";
+import { Award, GraduationCap } from "lucide-react";
 
 const awards = [
-  { year: "2023", title: "Best Paper Award", org: "ACL 2023" },
-  { year: "2021", title: "Distinguished Researcher Award", org: "University of Technology" },
-  { year: "2018", title: "Young Scientist Award", org: "Association for Computational Linguistics" },
+  { year: "2025", title: "Special Recognition for Outstanding Reviews", org: "CHI 2025 – Conference on Human Factors in Computing Systems" },
+  { year: "2022", title: "Ph.D. Outstanding Thesis Award", org: "University Carlos III of Madrid" },
+  { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"' },
 ];
 
-const grants = [
-  { year: "2022–2025", title: "Neural Approaches to Multilingual NLP", amount: "$850,000", org: "National Science Foundation" },
-  { year: "2020–2023", title: "Conversational AI for Healthcare", amount: "$420,000", org: "National Institutes of Health" },
-  { year: "2018–2021", title: "Low-Resource Language Translation", amount: "$350,000", org: "DARPA" },
+const scholarships = [
+  { year: "2023", title: "Mobility Grant for Young Researchers", org: "University Carlos III of Madrid – Research visit to Embodied Visualisation Lab, Monash University" },
+  { year: "2017", title: "Ph.D. Scholarship", org: "University Carlos III of Madrid" },
+  { year: "2016", title: "M.Sc. Scholarship for Outstanding Ibero-American Students", org: "Fundación Carolina" },
 ];
 
 export function HeroSection() {
@@ -25,11 +25,11 @@ export function HeroSection() {
               <Avatar className="w-48 h-48 md:w-56 md:h-56 border-4 border-border shadow-lg">
                 <AvatarImage
                   src="/placeholder.svg"
-                  alt="Dr. Jane Smith"
+                  alt="Andrés Santos Torres"
                   className="object-cover"
                 />
                 <AvatarFallback className="text-4xl font-serif bg-secondary text-secondary-foreground">
-                  JS
+                  AS
                 </AvatarFallback>
               </Avatar>
             </div>
@@ -37,32 +37,33 @@ export function HeroSection() {
             {/* Bio Content */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
-                Dr. Jane Smith
+                Andrés Santos Torres
               </h1>
               <p className="text-xl text-accent font-medium mb-4">
-                Associate Professor of Computer Science
+                Researcher & Adjunct Lecturer
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                University of Technology • Department of Computer Science
+                Vicomtech, Digital Media • Deusto University
+                <br />
+                Donostia – San Sebastián, Basque Country, Spain
               </p>
               <div className="w-16 h-1 bg-accent mx-auto md:mx-0 mb-6" />
               <p className="text-foreground/90 leading-relaxed max-w-2xl">
-                I am an Associate Professor specializing in artificial intelligence and machine learning,
-                with a focus on natural language processing and human-computer interaction. My research
-                aims to develop intelligent systems that can understand and generate human language,
-                making technology more accessible and intuitive for everyone. I have published over 50
-                peer-reviewed papers and received multiple grants from leading research foundations.
+                My research focuses on designing, prototyping, and evaluating meaningful experiences
+                in immersive environments that can be applied to various industry applications,
+                including commensality, culture, and creativity. My research interests span
+                Human-Computer Interaction, Computer-Supported Collaborative Work, and Social XR.
               </p>
             </div>
           </div>
 
-          {/* Awards & Grants */}
+          {/* Awards & Scholarships */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Awards */}
             <div className="bg-card rounded-lg border border-border p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
                 <Award className="h-5 w-5 text-accent" />
-                <h3 className="text-xl font-serif font-semibold text-primary">Awards & Honors</h3>
+                <h3 className="text-xl font-serif font-semibold text-primary">Awards</h3>
               </div>
               <ul className="space-y-3">
                 {awards.map((award, index) => (
@@ -77,19 +78,19 @@ export function HeroSection() {
               </ul>
             </div>
 
-            {/* Grants */}
+            {/* Scholarships */}
             <div className="bg-card rounded-lg border border-border p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
-                <DollarSign className="h-5 w-5 text-accent" />
-                <h3 className="text-xl font-serif font-semibold text-primary">Research Grants</h3>
+                <GraduationCap className="h-5 w-5 text-accent" />
+                <h3 className="text-xl font-serif font-semibold text-primary">Scholarships</h3>
               </div>
               <ul className="space-y-3">
-                {grants.map((grant, index) => (
+                {scholarships.map((item, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-sm font-medium text-accent whitespace-nowrap">{grant.year}</span>
+                    <span className="text-sm font-medium text-accent whitespace-nowrap">{item.year}</span>
                     <div>
-                      <p className="font-medium text-foreground">{grant.title}</p>
-                      <p className="text-sm text-muted-foreground">{grant.org} • {grant.amount}</p>
+                      <p className="font-medium text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted-foreground">{item.org}</p>
                     </div>
                   </li>
                 ))}
