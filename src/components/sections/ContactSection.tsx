@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const academicLinks = [
   { name: "Personal Website", url: "https://andressantos9.github.io/", icon: "🌐" },
   { name: "GitHub", url: "https://github.com/andresSantos9", icon: "💻" },
-  { name: "Google Scholar", url: "https://scholar.google.com/", icon: "📚" },
+  { name: "Google Scholar", url: "https://scholar.google.es/citations?user=wLFCis0AAAAJ&hl=es&oi=ao", icon: "📚" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/andres-santos-torres/", icon: "🔗" },
 ];
 
