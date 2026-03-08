@@ -9,7 +9,7 @@ import googleScholarLogo from "@/assets/google-scholar-logo.png";
 const awards = [
   
   { year: "2022", title: "Ph.D. Outstanding Thesis Award", org: "University Carlos III of Madrid" },
-  { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"' },
+  { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"', url: "https://aipo.es/en/activities/awards/awards-jesus-lores/?pagina=3" },
 ];
 
 const profileLinks = [
@@ -97,7 +97,18 @@ export function HeroSection() {
                   <li key={index} className="flex gap-3">
                     <span className="text-sm font-medium text-accent whitespace-nowrap">{award.year}</span>
                     <div>
-                      <p className="font-medium text-foreground">{award.title}</p>
+                      {award.url ? (
+                        <a
+                          href={award.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-foreground hover:text-primary transition-colors"
+                        >
+                          {award.title}
+                        </a>
+                      ) : (
+                        <p className="font-medium text-foreground">{award.title}</p>
+                      )}
                       <p className="text-sm text-muted-foreground">{award.org}</p>
                     </div>
                   </li>
