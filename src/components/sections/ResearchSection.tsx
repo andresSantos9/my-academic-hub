@@ -1,4 +1,6 @@
 import { ExternalLink, Play, FileText, Plus, Trophy, Youtube } from "lucide-react";
+import sharedWorkspace from "@/assets/shared_workspace.png";
+import sharedExperience from "@/assets/shared_experience.png";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -75,7 +77,7 @@ const publications = [
     authors: "A. Santos-Torres, T. Zarraonandia, P. Díaz, and I. Aedo",
     venue: "IEEE Access, vol. 10, 2022",
     year: "2022",
-    thumbnail: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&h=225&fit=crop",
+    teaserImages: [sharedWorkspace, sharedExperience],
     hasVideo: false,
     paperUrl: "https://doi.org/10.1109/ACCESS.2022.3176949",
   },
@@ -207,6 +209,17 @@ export function ResearchSection() {
                           referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
                         />
+                      ) : (pub as any).teaserImages ? (
+                        <div className="flex w-full h-full">
+                          {(pub as any).teaserImages.map((img: string, i: number) => (
+                            <img
+                              key={i}
+                              src={img}
+                              alt={`${pub.title} - Figure ${i + 1}`}
+                              className="object-cover h-full flex-1"
+                            />
+                          ))}
+                        </div>
                       ) : (
                         <img
                           src={pub.thumbnail}
