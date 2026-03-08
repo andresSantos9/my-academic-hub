@@ -1,4 +1,4 @@
-import { ExternalLink, Play, FileText, Plus, Trophy } from "lucide-react";
+import { ExternalLink, Play, FileText, Plus, Trophy, Youtube } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,6 +22,7 @@ const researchProjects = [
     role: "Researcher",
     funder: "European Union through SPIRIT project",
     link: "https://www.vicomtech.org/en/rdi-tangible/success-stories/story/bazkaria-eating-together-through-immersive-telepresence",
+    youtubeUrl: "https://youtu.be/H4r9WMXuMZE",
   },
   {
     period: "May 2024 – Jun 2025",
@@ -151,17 +152,30 @@ export function ResearchSection() {
                       <span className="text-sm font-medium text-accent">{project.period}</span>
                       <Badge variant="outline" className="text-xs">{project.role}</Badge>
                     </div>
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent hover:bg-accent/90 transition-colors"
-                        title="View project details"
-                      >
-                        <Plus className="h-4 w-4 text-accent-foreground" />
-                      </a>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {project.youtubeUrl && (
+                        <a
+                          href={project.youtubeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 transition-colors"
+                          title="Watch video"
+                        >
+                          <Youtube className="h-4 w-4 text-white" />
+                        </a>
+                      )}
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent hover:bg-accent/90 transition-colors"
+                          title="View project details"
+                        >
+                          <Plus className="h-4 w-4 text-accent-foreground" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                   <h4 className="font-serif font-semibold text-primary mb-1">{project.title}</h4>
                   <p className="text-sm text-muted-foreground">Funded by: {project.funder}</p>
