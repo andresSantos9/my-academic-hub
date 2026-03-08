@@ -21,6 +21,7 @@ const researchProjects = [
     title: "Bazkaria: Eating Together Through Immersive Telepresence",
     role: "Researcher",
     funder: "European Union through SPIRIT project",
+    link: "https://www.vicomtech.org/en/rdi-tangible/success-stories/story/bazkaria-eating-together-through-immersive-telepresence",
   },
   {
     period: "May 2024 – Jun 2025",
