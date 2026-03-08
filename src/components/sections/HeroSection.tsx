@@ -97,7 +97,18 @@ export function HeroSection() {
                   <li key={index} className="flex gap-3">
                     <span className="text-sm font-medium text-accent whitespace-nowrap">{award.year}</span>
                     <div>
-                      <p className="font-medium text-foreground">{award.title}</p>
+                      {award.url ? (
+                        <a
+                          href={award.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-foreground hover:text-primary transition-colors"
+                        >
+                          {award.title}
+                        </a>
+                      ) : (
+                        <p className="font-medium text-foreground">{award.title}</p>
+                      )}
                       <p className="text-sm text-muted-foreground">{award.org}</p>
                     </div>
                   </li>
