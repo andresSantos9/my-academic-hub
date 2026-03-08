@@ -40,7 +40,14 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Office</p>
                     <p className="text-muted-foreground">
-                      Vicomtech, Digital Media & Communications
+                      <a
+                        href="https://share.google/drE9bgoCES4WUf55V"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        Vicomtech, Digital Media & Communications
+                      </a>
                       <br />
                       Donostia – San Sebastián
                       <br />
