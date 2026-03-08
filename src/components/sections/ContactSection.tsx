@@ -1,20 +1,9 @@
-import { Mail, MapPin, ExternalLink, Globe } from "lucide-react";
+import { Mail, MapPin, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import orcidLogo from "@/assets/orcid-logo.png";
-import githubLogo from "@/assets/github-logo.png";
-import googleScholarLogo from "@/assets/google-scholar-logo.png";
-import linkedinLogo from "@/assets/linkedin-logo.png";
-
-const academicLinks = [
-  { name: "ORCID", url: "https://orcid.org/0000-0003-2679-2440", logo: orcidLogo },
-  { name: "GitHub", url: "https://github.com/andresSantos9", logo: githubLogo },
-  { name: "Google Scholar", url: "https://scholar.google.es/citations?user=wLFCis0AAAAJ&hl=es&oi=ao", logo: googleScholarLogo },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/andres-santos-torres/", logo: linkedinLogo },
-];
 
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
