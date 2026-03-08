@@ -9,7 +9,7 @@ import googleScholarLogo from "@/assets/google-scholar-logo.png";
 const awards = [
   
   { year: "2022", title: "Ph.D. Outstanding Thesis Award", org: "University Carlos III of Madrid" },
-  { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"' },
+  { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"', url: "https://aipo.es/en/activities/awards/awards-jesus-lores/?pagina=3" },
 ];
 
 const profileLinks = [
