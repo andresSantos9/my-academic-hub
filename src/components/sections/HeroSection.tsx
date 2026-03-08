@@ -1,11 +1,25 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Award, DollarSign } from "lucide-react";
+
+const awards = [
+  { year: "2023", title: "Best Paper Award", org: "ACL 2023" },
+  { year: "2021", title: "Distinguished Researcher Award", org: "University of Technology" },
+  { year: "2018", title: "Young Scientist Award", org: "Association for Computational Linguistics" },
+];
+
+const grants = [
+  { year: "2022–2025", title: "Neural Approaches to Multilingual NLP", amount: "$850,000", org: "National Science Foundation" },
+  { year: "2020–2023", title: "Conversational AI for Healthcare", amount: "$420,000", org: "National Institutes of Health" },
+  { year: "2018–2021", title: "Low-Resource Language Translation", amount: "$350,000", org: "DARPA" },
+];
 
 export function HeroSection() {
   return (
-    <section id="about" className="min-h-screen flex items-center pt-20 pb-16">
+    <section id="about" className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Profile Header */}
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-16">
             {/* Profile Photo */}
             <div className="flex-shrink-0">
               <Avatar className="w-48 h-48 md:w-56 md:h-56 border-4 border-border shadow-lg">
@@ -39,6 +53,47 @@ export function HeroSection() {
                 making technology more accessible and intuitive for everyone. I have published over 50
                 peer-reviewed papers and received multiple grants from leading research foundations.
               </p>
+            </div>
+          </div>
+
+          {/* Awards & Grants */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Awards */}
+            <div className="bg-card rounded-lg border border-border p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <Award className="h-5 w-5 text-accent" />
+                <h3 className="text-xl font-serif font-semibold text-primary">Awards & Honors</h3>
+              </div>
+              <ul className="space-y-3">
+                {awards.map((award, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="text-sm font-medium text-accent whitespace-nowrap">{award.year}</span>
+                    <div>
+                      <p className="font-medium text-foreground">{award.title}</p>
+                      <p className="text-sm text-muted-foreground">{award.org}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Grants */}
+            <div className="bg-card rounded-lg border border-border p-6 shadow-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <DollarSign className="h-5 w-5 text-accent" />
+                <h3 className="text-xl font-serif font-semibold text-primary">Research Grants</h3>
+              </div>
+              <ul className="space-y-3">
+                {grants.map((grant, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="text-sm font-medium text-accent whitespace-nowrap">{grant.year}</span>
+                    <div>
+                      <p className="font-medium text-foreground">{grant.title}</p>
+                      <p className="text-sm text-muted-foreground">{grant.org} • {grant.amount}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
