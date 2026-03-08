@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Award, GraduationCap } from "lucide-react";
+import profilePhoto from "@/assets/asantos.jpg";
 
 const awards = [
   { year: "2025", title: "Special Recognition for Outstanding Reviews", org: "CHI 2025 – Conference on Human Factors in Computing Systems" },
@@ -24,7 +25,7 @@ export function HeroSection() {
             <div className="flex-shrink-0">
               <Avatar className="w-48 h-48 md:w-56 md:h-56 border-4 border-border shadow-lg">
                 <AvatarImage
-                  src="/placeholder.svg"
+                  src={profilePhoto}
                   alt="Andrés Santos Torres"
                   className="object-cover"
                 />
