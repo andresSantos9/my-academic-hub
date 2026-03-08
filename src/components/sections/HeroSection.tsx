@@ -12,6 +12,13 @@ const awards = [
   { year: "2018", title: "Special Mention – Accessit Jesús Lorés", org: 'Outstanding research paper "Exploring interaction mechanisms for map interfaces in VR environments"' },
 ];
 
+const profileLinks = [
+  { name: "ORCID", logo: orcidLogo, url: "https://orcid.org/0000-0003-2679-2440" },
+  { name: "GitHub", logo: githubLogo, url: "https://github.com/asantos-vicomtech" },
+  { name: "LinkedIn", logo: linkedinLogo, url: "https://www.linkedin.com/in/asantost/" },
+  { name: "Google Scholar", logo: googleScholarLogo, url: "https://scholar.google.com/citations?user=gQTQMdEAAAAJ" },
+];
+
 const scholarships = [
   { year: "2023", title: "Mobility Grant for Young Researchers", org: "University Carlos III of Madrid – Research visit to Embodied Visualisation Lab, Monash University" },
   { year: "2017", title: "Ph.D. Scholarship", org: "University Carlos III of Madrid" },
