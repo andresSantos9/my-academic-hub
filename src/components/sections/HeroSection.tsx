@@ -25,7 +25,7 @@ export function HeroSection() {
             <div className="flex-shrink-0">
               <Avatar className="w-48 h-48 md:w-56 md:h-56 border-4 border-border shadow-lg">
                 <AvatarImage
-                  src="/placeholder.svg"
+                  src={profilePhoto}
                   alt="Andrés Santos Torres"
                   className="object-cover"
                 />
