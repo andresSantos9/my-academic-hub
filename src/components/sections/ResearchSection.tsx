@@ -80,7 +80,7 @@ const publications = [
     hasVideo: true,
     videoUrl: "https://www.youtube.com/watch?v=EjXQ2xbNNOc",
     embedVideo: "https://www.youtube.com/embed/EjXQ2xbNNOc?si=SsRA5xWU1GYpGQ8M",
-    paperUrl: "#",
+    paperUrl: "https://doi.org/10.1145/3715336.3735730",
   },
   {
     title: "Comparing Visual Representations of Collaborative Map Interfaces for Immersive Virtual Environments",
