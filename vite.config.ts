@@ -6,7 +6,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-  const base = process.env.GITHUB_ACTIONS === "true" && repoName ? `/${repoName}/` : "/";
+  const isUserSite = repoName?.endsWith(".github.io");
+  const base = process.env.GITHUB_ACTIONS === "true" && repoName && !isUserSite ? `/${repoName}/` : "/";
 
   return {
     base,
