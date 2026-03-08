@@ -6,10 +6,10 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground text-sm mb-2">
-            Department of Computer Science • University of Technology
+            Vicomtech, Digital Media • Deusto University
           </p>
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Dr. Jane Smith. All rights reserved.
+            © {currentYear} Andrés Santos Torres. All rights reserved.
           </p>
         </div>
       </div>

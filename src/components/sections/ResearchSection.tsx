@@ -5,53 +5,99 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const researchInterests = [
-  "Natural Language Processing",
-  "Machine Learning",
-  "Deep Learning",
   "Human-Computer Interaction",
-  "Computational Linguistics",
-  "Sentiment Analysis",
+  "Computer-Supported Collaborative Work",
+  "Social XR",
+  "Immersive Environments",
+  "Virtual Reality",
+  "Augmented Reality",
+  "Commensality",
+  "Immersive Analytics",
+];
+
+const researchProjects = [
+  {
+    period: "Sep 2024 – Sep 2025",
+    title: "Bazkaria: Eating Together Through Immersive Telepresence",
+    role: "Researcher",
+    funder: "European Union through SPIRIT project",
+  },
+  {
+    period: "May 2024 – Jun 2025",
+    title: "6GDIFERENTE: 6G Distributed and Federated Experiments in Radio, Edge and Non-Terrestrial Networks",
+    role: "Researcher",
+    funder: "Centro para el Desarrollo Tecnológico y la Innovación (CDTI)",
+  },
+  {
+    period: "Jan 2019 – Sep 2022",
+    title: "CROSSCOLLAB: Identifying the Affordances of Cross-Reality to Enhance Collaboration",
+    role: "Researcher",
+    funder: "Spanish Research State Agency (AEI)",
+  },
+  {
+    period: "Sep 2017 – Dec 2020",
+    title: "PACE: Pervasive and Affordable Technologies for Civic Engagement",
+    role: "Researcher",
+    funder: "Spanish Ministry of Economic Affairs and Digital Transformation",
+  },
 ];
 
 const publications = [
   {
-    title: "Transformer-Based Models for Cross-Lingual Understanding",
-    authors: "Smith, J., Chen, W., & Rodriguez, M.",
-    venue: "ACL 2023 - Annual Conference of the Association for Computational Linguistics",
-    year: "2023",
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=225&fit=crop",
+    title: "6GTWIN: An Immersive Digital Twin Platform for 6G Network Monitoring and Experimentation",
+    authors: "A. Santos-Torres, S. Cabrero Barros, and M. Zorrilla",
+    venue: "Workshop on Human Factors in Immersive Analytics (HFIA), IEEE VIS 2025",
+    year: "2025",
+    thumbnail: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=225&fit=crop",
     hasVideo: true,
-    videoUrl: "https://example.com/video1",
-    paperUrl: "https://example.com/paper1",
+    videoUrl: "https://doi.org/10.1109/HFIA68651.2025.00010",
+    paperUrl: "https://doi.org/10.1109/HFIA68651.2025.00010",
   },
   {
-    title: "Multimodal Sentiment Analysis Using Attention Mechanisms",
-    authors: "Smith, J., & Williams, A.",
-    venue: "EMNLP 2022 - Conference on Empirical Methods in Natural Language Processing",
-    year: "2022",
-    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop",
+    title: "The XR Table: Envisioning the Future of Remote Dining Experiences Using Immersive Telepresence",
+    authors: "A. Santos-Torres, P. de Torres Coll, T. Bukits, R. Perisé, and S. Cabrero Barros",
+    venue: "ACM Designing Interactive Systems Conference 2025",
+    year: "2025",
+    thumbnail: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=225&fit=crop",
     hasVideo: true,
-    videoUrl: "https://example.com/video2",
-    paperUrl: "https://example.com/paper2",
+    videoUrl: "#",
+    paperUrl: "#",
   },
   {
-    title: "Few-Shot Learning for Named Entity Recognition in Low-Resource Languages",
-    authors: "Smith, J., Patel, R., & Nakamura, K.",
-    venue: "NAACL 2022 - North American Chapter of the ACL",
+    title: "Comparing Visual Representations of Collaborative Map Interfaces for Immersive Virtual Environments",
+    authors: "A. Santos-Torres, T. Zarraonandia, P. Díaz, and I. Aedo",
+    venue: "IEEE Access, vol. 10, 2022",
     year: "2022",
-    thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=225&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&h=225&fit=crop",
     hasVideo: false,
-    paperUrl: "https://example.com/paper3",
+    paperUrl: "https://doi.org/10.1109/ACCESS.2022.3176949",
   },
   {
-    title: "Neural Approaches to Conversational AI: A Survey",
-    authors: "Smith, J.",
-    venue: "Journal of Artificial Intelligence Research, Vol. 68",
-    year: "2021",
-    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=225&fit=crop",
-    hasVideo: true,
-    videoUrl: "https://example.com/video4",
-    paperUrl: "https://example.com/paper4",
+    title: "An Empirical Comparison of Interaction Styles for Map Interfaces in Immersive Virtual Environments",
+    authors: "A. Santos-Torres, T. Zarraonandia, P. Díaz, T. Onorati, and I. Aedo",
+    venue: "Multimedia Tools and Applications, vol. 79, 2020",
+    year: "2020",
+    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=225&fit=crop",
+    hasVideo: false,
+    paperUrl: "https://doi.org/10.1007/s11042-020-08709-9",
+  },
+  {
+    title: "Virtual Reality for Enhancing Engagement with Net Zero Transitions",
+    authors: "A. Alshardy, S. Goodwin, A. Santos-Torres, and A. Liebman",
+    venue: "Workshop on Energy Data Visualization (EnergyVis), 2023",
+    year: "2023",
+    thumbnail: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=225&fit=crop",
+    hasVideo: false,
+    paperUrl: "https://doi.org/10.1109/EnergyVis60781.2023.00011",
+  },
+  {
+    title: "A Comparative Study of Menus in Virtual Reality Environments",
+    authors: "A. Santos, T. Zarraonandia, P. Díaz, and I. Aedo",
+    venue: "ACM International Conference on Interactive Surfaces and Spaces (ISS), 2017",
+    year: "2017",
+    thumbnail: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=400&h=225&fit=crop",
+    hasVideo: false,
+    paperUrl: "https://doi.org/10.1145/3132272.3132277",
   },
 ];
 
@@ -85,6 +131,25 @@ export function ResearchSection() {
             </div>
           </div>
 
+          {/* Research Projects */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-serif font-semibold text-primary mb-8 text-center">
+              Research Projects
+            </h3>
+            <div className="space-y-4">
+              {researchProjects.map((project, index) => (
+                <div key={index} className="bg-card rounded-lg border border-border p-5 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-sm font-medium text-accent">{project.period}</span>
+                    <Badge variant="outline" className="text-xs">{project.role}</Badge>
+                  </div>
+                  <h4 className="font-serif font-semibold text-primary mb-1">{project.title}</h4>
+                  <p className="text-sm text-muted-foreground">Funded by: {project.funder}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Publications */}
           <div>
             <h3 className="text-2xl font-serif font-semibold text-primary mb-8 text-center">
@@ -96,7 +161,6 @@ export function ResearchSection() {
                   key={index}
                   className="overflow-hidden border-border hover:shadow-lg transition-shadow"
                 >
-                  {/* Thumbnail with video overlay */}
                   <div className="relative group">
                     <AspectRatio ratio={16 / 9}>
                       <img
@@ -134,33 +198,15 @@ export function ResearchSection() {
                     <p className="text-sm text-muted-foreground mb-4 italic">{pub.venue}</p>
 
                     <div className="flex gap-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        asChild
-                        className="flex-1"
-                      >
-                        <a
-                          href={pub.paperUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                      <Button variant="outline" size="sm" asChild className="flex-1">
+                        <a href={pub.paperUrl} target="_blank" rel="noopener noreferrer">
                           <FileText className="h-4 w-4 mr-1" />
                           Paper
                         </a>
                       </Button>
                       {pub.hasVideo && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          asChild
-                          className="flex-1"
-                        >
-                          <a
-                            href={pub.videoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                        <Button variant="outline" size="sm" asChild className="flex-1">
+                          <a href={pub.videoUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4 mr-1" />
                             Video
                           </a>

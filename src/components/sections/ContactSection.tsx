@@ -1,4 +1,4 @@
-import { Mail, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,32 +6,15 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 
 const academicLinks = [
-  {
-    name: "Google Scholar",
-    url: "https://scholar.google.com/",
-    icon: "📚",
-  },
-  {
-    name: "ORCID",
-    url: "https://orcid.org/",
-    icon: "🆔",
-  },
-  {
-    name: "ResearchGate",
-    url: "https://www.researchgate.net/",
-    icon: "🔬",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/",
-    icon: "💻",
-  },
+  { name: "Personal Website", url: "https://andressantos9.github.io/", icon: "🌐" },
+  { name: "GitHub", url: "https://github.com/andresSantos9", icon: "💻" },
+  { name: "Google Scholar", url: "https://scholar.google.com/", icon: "📚" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/andr%C3%A9s-santos-torres/", icon: "🔗" },
 ];
 
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission would be handled here
     alert("Thank you for your message! I will get back to you soon.");
   };
 
@@ -59,10 +42,10 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <a
-                      href="mailto:jane.smith@university.edu"
+                      href="mailto:asantos@vicomtech.org"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      jane.smith@university.edu
+                      asantos@vicomtech.org
                     </a>
                   </div>
                 </div>
@@ -72,19 +55,34 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">Office</p>
                     <p className="text-muted-foreground">
-                      Room 4.215, Computer Science Building
+                      Vicomtech, Digital Media
                       <br />
-                      University of Technology
+                      Donostia – San Sebastián
                       <br />
-                      123 Academic Drive, Tech City, TC 12345
+                      Basque Country, Spain
                     </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Globe className="h-5 w-5 text-accent mt-1" />
+                  <div>
+                    <p className="font-medium text-foreground">Website</p>
+                    <a
+                      href="https://andressantos9.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      andressantos9.github.io
+                    </a>
                   </div>
                 </div>
               </div>
 
               {/* Academic Links */}
               <h3 className="text-xl font-serif font-semibold text-primary mb-4">
-                Academic Profiles
+                Profiles
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 {academicLinks.map((link) => (
@@ -112,41 +110,19 @@ export function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      placeholder="Your name"
-                      required
-                      className="bg-background"
-                    />
+                    <Input id="name" placeholder="Your name" required className="bg-background" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your.email@example.com"
-                      required
-                      className="bg-background"
-                    />
+                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-background" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input
-                      id="subject"
-                      placeholder="Subject of your message"
-                      required
-                      className="bg-background"
-                    />
+                    <Input id="subject" placeholder="Subject of your message" required className="bg-background" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Your message..."
-                      rows={4}
-                      required
-                      className="bg-background resize-none"
-                    />
+                    <Textarea id="message" placeholder="Your message..." rows={4} required className="bg-background resize-none" />
                   </div>
                   <Button type="submit" className="w-full">
                     Send Message
