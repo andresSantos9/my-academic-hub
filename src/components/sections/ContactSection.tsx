@@ -1,15 +1,7 @@
-import { Mail, MapPin, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { Mail, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function ContactSection() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for your message! I will get back to you soon.");
-  };
 
   return (
     <section id="contact" className="py-20">
@@ -59,33 +51,15 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Updates Section */}
             <Card className="border-border">
               <CardContent className="p-6">
-                <h3 className="text-xl font-serif font-semibold text-primary mb-6">
-                  Send a Message
+                <h3 className="text-xl font-serif font-semibold text-primary mb-4">
+                  Updates
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" required className="bg-background" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-background" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="Subject of your message" required className="bg-background" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Your message..." rows={4} required className="bg-background resize-none" />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
-                  </Button>
-                </form>
+                <p className="text-foreground/80 text-sm">
+                  I will be sharing news, research updates, and announcements here. Stay tuned for the latest from my work at Vicomtech and Deusto University.
+                </p>
               </CardContent>
             </Card>
           </div>
